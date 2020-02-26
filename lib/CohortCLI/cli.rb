@@ -1,4 +1,4 @@
-class CohortCli::class
+class CohortCLI::CLI
   
   def start 
     puts "Hello there!"
