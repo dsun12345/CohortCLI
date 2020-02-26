@@ -8,7 +8,7 @@ class CohortCLI::CLI
    def start 
     puts "Hello there!"
     puts "Getting Data From API ... Please wait"
-    puts "Creating new OBJS"
+    @objects = CohortCLI::Stuff.all
     display_info 
   end 
   
