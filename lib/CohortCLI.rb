@@ -6,6 +6,12 @@
 require "CohortCLI/version"
 require "CohortCLI/cli"
 
+
+#dependencies
+require "pry"
+
+
+
 module CohortCLI
   class Error < StandardError; end
   # Your code goes here...
