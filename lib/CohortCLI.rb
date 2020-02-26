@@ -4,6 +4,7 @@
 
 
 require "CohortCLI/version"
+require "CohortCLI/cli"
 
 module CohortCLI
   class Error < StandardError; end
