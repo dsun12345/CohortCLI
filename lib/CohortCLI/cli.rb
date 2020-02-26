@@ -9,10 +9,25 @@ class CohortCLI::CLI
     puts "Hello there!"
     puts "Getting Data From API ... Please wait"
     puts "Creating new OBJS"
-    
-    binding.pry
+    display_info 
   end 
   
+  def display_info 
+    puts "please make selection:"
+    input = gets.strip.downcase
+    
+    if input == "actors"
+      puts "===Actor List ==="
+      puts "list of actors/objs"
+      display_info 
+    elsif input == "movies"
+      puts "===Movies List ==="
+      puts "list of movies/objs"
+      display_info 
+    else 
+      quit 
+    end 
+  end 
   
   
   # deal with inputs (loop to keep asking to get new info)
@@ -23,10 +38,9 @@ class CohortCLI::CLI
   # condition to check input for good value 
   # else tell them try again 
   
-  # exit command 
-  # if input == "EXIT"
-  # kill program, say good bye 
-  
+  def quit 
+    puts "goodbye"
+  end 
  
 
 end 
