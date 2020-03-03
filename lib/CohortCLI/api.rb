@@ -12,7 +12,7 @@ class CohortCLI::API
       playedBy: @character_hash["playedBy"]
     }
     
-    binding.pry 
+   CohortCLI::Character.new(character_obj)
   end 
 
 

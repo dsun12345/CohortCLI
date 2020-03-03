@@ -1,18 +1,21 @@
 class CohortCLI::Character
-
+attr_accessor :name, :gender, :culture, :titles, :playedBy
   @@all = []
 
   def initialize(hash)
-    # set up attrs
     
+    binding.pry 
+    hash.each {|key, value| self.send(("#{key}="), value)}
     save
   end 
 
   def self.all 
-    
+    @@all 
   end 
   
-  #custom instance methods if needed
+  def save
+    binding.pry 
+  end 
   
   
 end 

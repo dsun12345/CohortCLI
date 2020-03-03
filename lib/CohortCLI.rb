@@ -1,11 +1,7 @@
-# environment file 
-# in here loads all files needed to run our app 
-
-
-
 require "CohortCLI/version"
 require "CohortCLI/cli"
 require "CohortCLI/api"
+require "CohortCLI/character"
 
 
 #dependencies
