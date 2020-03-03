@@ -5,6 +5,7 @@
 
 require "CohortCLI/version"
 require "CohortCLI/cli"
+require "CohortCLI/api"
 
 
 #dependencies

@@ -1,4 +1,4 @@
-class CohortCLI::Stuff 
+class CohortCLI::Pokemon
 
   @@all = []
 

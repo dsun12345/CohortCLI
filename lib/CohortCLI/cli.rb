@@ -7,27 +7,25 @@ class CohortCLI::CLI
   
    def start 
     puts "Hello there!"
-    puts "Getting Data From API ... Please wait"
-    @objects = CohortCLI::Stuff.all
-    display_info 
+    @data = CohortCLI::API.get_pokemon
   end 
   
-  def display_info 
-    puts "please make selection:"
-    input = gets.strip.downcase
+  # def display_info 
+  #   puts "please make selection:"
+  #   input = gets.strip.downcase
     
-    if input == "actors"
-      puts "===Actor List ==="
-      puts "list of actors/objs"
-      display_info 
-    elsif input == "movies"
-      puts "===Movies List ==="
-      puts "list of movies/objs"
-      display_info 
-    else 
-      quit 
-    end 
-  end 
+  #   if input == "actors"
+  #     puts "===Actor List ==="
+  #     puts "list of actors/objs"
+  #     display_info 
+  #   elsif input == "movies"
+  #     puts "===Movies List ==="
+  #     puts "list of movies/objs"
+  #     display_info 
+  #   else 
+  #     quit 
+  #   end 
+  # end 
   
   
   # deal with inputs (loop to keep asking to get new info)
