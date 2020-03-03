@@ -7,25 +7,14 @@ class CohortCLI::CLI
     input = gets.strip.downcase
     @data = CohortCLI::API.get_character(input)
     @objects = CohortCLI::Character.all 
-    binding.pry 
+    display_info 
   end 
   
-  # def display_info 
-  #   puts "please make selection:"
-  #   input = gets.strip.downcase
-    
-  #   if input == "actors"
-  #     puts "===Actor List ==="
-  #     puts "list of actors/objs"
-  #     display_info 
-  #   elsif input == "movies"
-  #     puts "===Movies List ==="
-  #     puts "list of movies/objs"
-  #     display_info 
-  #   else 
-  #     quit 
-  #   end 
-  # end 
+  def display_info 
+    puts "Here are your random characters:"
+    puts "--------------------------------"
+    @objects.each.with_index(1) {|character, index| puts "#{index}. #{character.titles}"}
+  end 
   
   
   # deal with inputs (loop to keep asking to get new info)
