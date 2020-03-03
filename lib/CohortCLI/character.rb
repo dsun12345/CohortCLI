@@ -3,8 +3,6 @@ attr_accessor :name, :gender, :culture, :titles, :playedBy
   @@all = []
 
   def initialize(hash)
-    
-    binding.pry 
     hash.each {|key, value| self.send(("#{key}="), value)}
     save
   end 
@@ -14,7 +12,7 @@ attr_accessor :name, :gender, :culture, :titles, :playedBy
   end 
   
   def save
-    binding.pry 
+    @@all << self 
   end 
   
   

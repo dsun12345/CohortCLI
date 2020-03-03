@@ -8,6 +8,8 @@ class CohortCLI::CLI
    def start 
     puts "Hello there!"
     @data = CohortCLI::API.get_character
+    @objects = CohortCLI::Character.all 
+    binding.pry 
   end 
   
   # def display_info 
