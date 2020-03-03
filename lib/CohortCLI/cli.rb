@@ -7,7 +7,7 @@ class CohortCLI::CLI
   
    def start 
     puts "Hello there!"
-    @data = CohortCLI::API.get_pokemon
+    @data = CohortCLI::API.get_weather
   end 
   
   # def display_info 

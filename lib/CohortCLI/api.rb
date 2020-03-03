@@ -1,8 +1,11 @@
-class CohortCLI::API 
+class CohortCLI::API
 
-  def self.get_pokemon
-    @pokemon_hash = HTTParty.get("https://pokeapi.co/api/v2/pokemon/ditto/")
+
+
+  def self.get_weather
+    @pokemon_hash = HTTParty.get("https://www.metaweather.com/api/location/search/?query=san")
     binding.pry 
+    
   end 
 
 
