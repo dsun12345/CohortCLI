@@ -14,17 +14,25 @@ class CohortCLI::CLI
     puts "Here are your random characters:"
     puts "--------------------------------"
     @objects.each.with_index(1) {|character, index| puts "#{index}. #{character.titles}"}
+    
+    puts "please select a index number to learn more"
+    input = gets.strip
+    @character = @objects[input.to_i - 1]
+    if(@character)
+      puts "#{@character.name}"
+      puts "#{@character.gender}"
+      puts "#{@character.culture}"
+      puts "#{@character.titles}"
+      puts "#{@character.playedBy}"
+    elsif (input == "quit")
+      quit 
+    else 
+      puts "Oops"
+      display_info
+    end 
+    
   end 
-  
-  
-  # deal with inputs (loop to keep asking to get new info)
-  # Ex. while input != "exit" do 
-  # display a list of something, or give examples of what we expect as input 
-  # get user input 
-  # depending on what we get, do something 
-  # condition to check input for good value 
-  # else tell them try again 
-  
+
   def quit 
     puts "goodbye"
   end 

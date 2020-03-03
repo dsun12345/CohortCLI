@@ -3,10 +3,12 @@ class CohortCLI::API
 
 
   def self.get_character(input)
-    @character_hash = HTTParty.get("https://anapioficeandfire.com/api/characters/#{input}")
-   
- 
-   character_obj = {
+      @character_hash = HTTParty.get("https://anapioficeandfire.com/api/characters/#{input}")
+    
+    if input.to_i > 2138 
+      puts "Please enter a valid number"
+    else
+     character_obj = {
       name: @character_hash["name"],
       gender: @character_hash["gender"],
       culture: @character_hash["culture"],
@@ -16,6 +18,7 @@ class CohortCLI::API
     
    CohortCLI::Character.new(character_obj)
   end 
+end 
 
 
 
