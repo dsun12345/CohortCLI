@@ -1,4 +1,4 @@
-class CohortCLI::Weather
+class CohortCLI::Character
 
   @@all = []
 
