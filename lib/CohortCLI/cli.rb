@@ -1,13 +1,11 @@
 class CohortCLI::CLI
-  
-  #start should great user, maybe give description
-  # get data from scraper/api file
-  #create new custom objects
-  # all inside start method 
-  
+
    def start 
     puts "Hello there!"
-    @data = CohortCLI::API.get_character
+    puts "------------"
+    puts "please enter a number from from 1-2138 to learn a random character's detail:"
+    input = gets.strip.downcase
+    @data = CohortCLI::API.get_character(input)
     @objects = CohortCLI::Character.all 
     binding.pry 
   end 
