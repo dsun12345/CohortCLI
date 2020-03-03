@@ -1,6 +1,10 @@
-# find api to 
-# use set url 
-# build hashes out for objs 
-# call custom class .new method 
-# send those back to our CLI 
+class CohortCLI::API 
 
+  def self.get_pokemon
+    @pokemon_hash = HTTParty.get("https://pokeapi.co/api/v2/pokemon/ditto/")
+    binding.pry 
+  end 
+
+
+
+end 

@@ -9,6 +9,7 @@ require "CohortCLI/cli"
 
 #dependencies
 require "pry"
+require "httparty"
 
 
 
