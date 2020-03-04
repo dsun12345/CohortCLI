@@ -1,4 +1,5 @@
 class CohortCLI::CLI
+attr_accessor :comments
 
   def start 
     puts "Hello there!"
@@ -7,12 +8,16 @@ class CohortCLI::CLI
     input1 = gets.strip.downcase
     puts "Please enter the character's last name:"
     input2 = gets.strip.downcase
-    if (input1 == quit || input2 == quit)
+    if (input1 == "quit" || input2 == "quit") 
       quit
     else 
       @data = CohortCLI::API.get_character(input1, input2)
+      if @data == nil 
+        start
+      else 
       @objects = CohortCLI::Character.all 
-      display_info 
+      display_info
+      end 
     end 
   end 
   
@@ -30,7 +35,20 @@ class CohortCLI::CLI
       puts "Status:     #{@character.status}"
       puts "Nickname:   #{@character.nickname}"
       puts "Portrayed:  #{@character.portrayed}"
-      display_info
+      if @character.comments != nil 
+      puts "Comments:   #{@character.comments}"
+      end 
+      puts "-----------------------------------"
+      puts "Would you like to comment on the character?"
+      input = gets.strip.downcase 
+      if input == "y"
+        puts "Please enter your comments"
+        comment = gets
+        @character.comments=(comment)
+        display_info
+      else 
+        display_info
+      end 
     elsif (input == "quit")
       quit 
     elsif (input == "menu")

@@ -1,5 +1,5 @@
 class CohortCLI::Character
-attr_accessor :name, :birthday, :occupation, :status, :nickname, :portrayed
+attr_accessor :name, :birthday, :occupation, :status, :nickname, :portrayed, :comments
   @@all = []
 
   def initialize(hash)
@@ -14,6 +14,6 @@ attr_accessor :name, :birthday, :occupation, :status, :nickname, :portrayed
   def save
     @@all << self 
   end 
-  
+
   
 end 
