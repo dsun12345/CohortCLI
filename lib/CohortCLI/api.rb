@@ -17,7 +17,7 @@ class CohortCLI::API
     }
 
 
-    # CohortCLI::Character.new(character_obj)
+    CohortCLI::Character.new(character_obj)
   end 
 
 
