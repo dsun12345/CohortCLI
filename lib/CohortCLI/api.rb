@@ -17,8 +17,8 @@ class CohortCLI::API
         nickname: hash["nickname"],
         portrayed: hash["portrayed"]
         }
+      CohortCLI::Character.new(character_obj)
     end 
-    CohortCLI::Character.new(character_obj)
   end 
 
 
