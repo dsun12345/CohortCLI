@@ -6,17 +6,18 @@ class CohortCLI::API
     @character_hash = HTTParty.get("https://www.breakingbadapi.com/api/characters?name=#{input1}+#{input2}") 
     hash = {} 
     hash = @character_hash[0]
-       
-    character_obj = {
-      name: hash["name"],
-      birthday: hash["birthday"],
-      occupation: hash["occupation"],
-      status: hash["status"],
-      nickname: hash["nickname"],
-      portrayed: hash["portrayed"]
-    }
-
-
+    
+    if @character_hash.empty?
+      puts "character entered was not valid"
+    else character_obj = {
+        name: hash["name"],
+        birthday: hash["birthday"],
+        occupation: hash["occupation"],
+        status: hash["status"],
+        nickname: hash["nickname"],
+        portrayed: hash["portrayed"]
+        }
+    end 
     CohortCLI::Character.new(character_obj)
   end 
 

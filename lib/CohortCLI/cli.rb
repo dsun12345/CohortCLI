@@ -2,13 +2,13 @@ class CohortCLI::CLI
 
    def start 
     puts "Hello there!"
-    # puts "------------"
-    # puts "please enter a number from from 1-2138 to learn a random character's detail:"
+    puts "------------"
+    puts "please enter the character's first name:"
     input1 = gets.strip.downcase
+    puts "Please enter the character's last name:"
     input2 = gets.strip.downcase
     @data = CohortCLI::API.get_character(input1, input2)
-    
-    # @objects = CohortCLI::Character.all 
+    @objects = CohortCLI::Character.all 
     # display_info 
   end 
   
