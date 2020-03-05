@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+If you would like to learn about a certain character, enter the first and last name of the character. Select it from the list that will proc and there you will see the information. If you would like to comment on the character, simply add a comment and the next time you return to the list and you select the character, the comment will pop up as additional information.
 
 ## Development
 
