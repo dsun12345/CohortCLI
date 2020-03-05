@@ -45,6 +45,7 @@ attr_accessor :comments
         puts "Please enter your comments"
         comment = gets
         @character.comments=(comment)
+        display_info
       else 
         display_info 
       end 
