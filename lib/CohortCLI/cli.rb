@@ -39,9 +39,9 @@ attr_accessor :comments
       puts "Comments:   #{@character.comments}"
       end 
       puts "-----------------------------------"
-      puts "Would you like to comment on the character?"
+      puts "Would you like to comment on the character? (y/n)"
       input = gets.strip.downcase 
-      if input == "y"
+      if (input == "y" || input == "yes")
         puts "Please enter your comments"
         comment = gets
         @character.comments=(comment)

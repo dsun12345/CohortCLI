@@ -2,9 +2,9 @@ HelloWorld
 
 # CohortCLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CohortCLI`. To experiment with that code, run `bin/CohortCLI` for an interactive prompt.
+Welcome to the Breakbad Gem! This gem allows you to run an interactive prompt after entering `bin/CohortCLI`.
+The gem will ask you for the character's first and last name to search it up in the database of the Breaking Bad TV Show. It will then store the information that it has been told to grab and the the name in a list with index numbers in front. If you would like to learn more about a character simply type out the index number infront of the character name that you have requested. After viewing the information it would ask whether you would like to comment on the character, and base on the response that you enter y/n, yes/no, it will ask you to type out your comment. It will store that comment and return to the list of names, the next time that you call up that same character again it will present the comment information. If at anytime you would like to leave the interface simply  type quit. 
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
